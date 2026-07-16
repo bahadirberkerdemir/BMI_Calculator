@@ -32,11 +32,14 @@ def onButtonClick():
             bmi=w/(h**2)
 
 
-            if bmi<18.5 : answerLabel.config(text=f"Your bmi is {bmi:.2f}. You are weak.")
-            elif bmi<25 : answerLabel.config(text=f"Your bmi is {bmi:.2f}. You are normal.")
-            elif bmi<30 : answerLabel.config(text=f"Your bmi is {bmi:.2f}. You are a bit overweight.")
-            elif bmi<35 : answerLabel.config(text=f"Your bmi is {bmi:.2f}. You are obese.")
-            else : answerLabel.config(text=f"Your bmi is {bmi:.2f}. You are extremely obese")
+            if bmi<16 : answerLabel.config(text=f"Your bmi is {bmi:.2f}. You are Severely Thin.")
+            elif bmi<17 : answerLabel.config(text=f"Your bmi is {bmi:.2f}. You are Moderately Thin.")
+            elif bmi<18.5 : answerLabel.config(text=f"Your bmi is {bmi:.2f}. You are Mildly Thin.")
+            elif bmi < 25 : answerLabel.config(text=f"Your bmi is {bmi:.2f}. You are Normal.")
+            elif bmi < 30: answerLabel.config(text=f"Your bmi is {bmi:.2f}. You are Overweight")
+            elif bmi < 35: answerLabel.config(text=f"Your bmi is {bmi:.2f}. You are Obese Class I")
+            elif bmi < 40: answerLabel.config(text=f"Your bmi is {bmi:.2f}. You are Obese Class II")
+            else : answerLabel.config(text=f"Your bmi is {bmi:.2f}. You are Obese Class III")
         except ValueError:
             answerLabel.config(text="Please enter a valid value!")
 
